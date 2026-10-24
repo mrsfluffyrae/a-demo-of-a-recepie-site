@@ -19,7 +19,7 @@ site/
 
 ## How the requirements are met
 
-| Requirement | How |
+| Requirement |
 | --- | --- |
 | Semantic elements | Every page uses `header`, `nav`, `main`, `footer`. Recipes are `article`s with `section`s for ingredients, method and nutrition. |
 | One `h1`, logical order | The site name in the header is a `p`, so each page has exactly one `h1` in `main`. Headings go h1, h2, h3 with no skipped levels. |
@@ -35,17 +35,7 @@ site/
 - **Long title in navigation:** nav labels are short, and the `ul` uses `flex-wrap`, so links wrap onto a new line instead of overflowing. The long curry title appears only in the `h1`, which uses `overflow-wrap: anywhere`.
 - **Empty form submission:** `required`, `type="email"` and `minlength` make the browser block an empty submit and move focus to the first invalid field, with no JavaScript. The server must validate again, because browser checks can be bypassed.
 
-## Form action
 
-The form posts to a placeholder URL (`https://example.com/contact-submit`). Replace it with a real form endpoint before publishing.
-
-## Validation
-
-Validate each page at https://validator.w3.org/ (use "Validate by File Upload"), or run the validator locally:
-
-```
-java -jar vnu.jar site/*.html site/recipes/*.html
-```
 
 Pages to check: `index.html`, `contact.html`, and the three files in `recipes/`.
 
